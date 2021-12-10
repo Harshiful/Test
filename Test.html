@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <title>Test</title>
+    </head>
+    <body>
+        <p id = "test"></p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.addEventListener("devicemotion", function(event) {
+                    let x = event.acceleration.x, y = event.acceleration.y, z = event.acceleration.z;
+                    var testPara = document.querySelector("#test");
+                    testPara.innerHTML = x + "<br>" + y + "<br>" + z;
+                });
+            });
+        </script>
+    </body>
+
+</html>
